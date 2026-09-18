@@ -1,0 +1,32 @@
+
+            body {
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            }
+
+            .glass-effect {
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .gradient-border {
+                position: relative;
+                background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+                background-size: 300% 300%;
+                animation: gradient 6s ease infinite;
+            }
+
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }

@@ -1,0 +1,49 @@
+/* Avatar circle styles */
+.avatar-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.avatar-container:hover {
+    border-color: #3498db;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.avatar-container::after {
+    content: '\f030'; /* Camera icon Unicode */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.avatar-container:hover::after {
+    opacity: 1;
+}
+
+.avatar-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

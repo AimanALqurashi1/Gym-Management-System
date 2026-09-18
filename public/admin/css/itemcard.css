@@ -1,0 +1,108 @@
+  .card {
+            width: 100%;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+        }
+        .card-header {
+            background: linear-gradient(45deg, #4e54c8, #8f94fb);
+            color: white;
+            border-radius: 1rem 1rem 0 0 !important;
+            padding: 1.5rem;
+        }
+        /* .card-body {
+            padding: 2rem;
+        } */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .form-group {
+            margin-bottom: 0.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .conditional-section {
+            background-color: #f0f8ff;
+            border-left: 4px solid #4e54c8;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            width: 100%;
+        }
+        .conditional-section h5 {
+            color: #4e54c8;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #cce5ff;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #4e54c8, #8f94fb);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #3a3f99, #6c71d9);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .instructions {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            margin: 0.5rem 0;
+        }
+
+
+
+/*---------------------- Horizontal Conditional Fields Implementation ---------------------------*/
+ 
+        .conditional-container {
+            display: none;
+            opacity: 0;
+            grid-column: 1 / -1; /* Span all columns */
+            transition: opacity 0.4s ease;
+        }
+        .conditional-container.visible {
+            display: grid;
+            opacity: 1;
+        }
+        .conditional-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            width: 100%;
+        }
+        .conditional-field {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+/* ---------------------------------------------------------------------------------------------------- */
+
+/*---------------------- vartical Conditional group Implementation ---------------------------*/
+        
+        .conditional-group {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .conditional-group.visible {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+/* check ( views/admin/itemcard/create1.blade.php ) to know how to use it */
+/* ---------------------------------------------------------------------------------------------------- */

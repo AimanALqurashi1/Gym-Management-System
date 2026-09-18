@@ -1,0 +1,6 @@
+<div>
+
+    @yield('content')
+
+
+</div>

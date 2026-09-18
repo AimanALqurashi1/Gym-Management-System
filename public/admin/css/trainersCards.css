@@ -1,0 +1,199 @@
+ /* subtle section header */
+.collection-head {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.collection-head h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: #1e293b;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(4px);
+    padding: 0.6rem 2rem;
+    border-radius: 60px;
+    box-shadow: 0 10px 25px -8px rgba(0, 20, 40, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.collection-head h2 i {
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+        /* grid – modern, responsive, airy */
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.2rem 1.8rem;
+    justify-items: center;
+    padding: 1.3rem;
+
+}
+
+        /* card style — premium neumorphism / soft minimal */
+.trainer-card {
+    background: #ffffffcc;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 32px;
+    box-shadow: 0 25px 40px -18px rgba(0, 32, 64, 0.25),
+        0 10px 20px -6px rgba(0, 0, 0, 0.05),
+        inset 0 1px 1px rgba(255, 255, 255, 0.6);
+    width: 100%;
+    max-width: 360px;
+    padding: 2rem 1.5rem 1.8rem;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 35px 50px -20px #1e293b40, 0 8px 18px rgba(0, 20, 50, 0.08);
+    border-color: #ffffff;
+}
+
+        /* image area — circular + gradient halo */
+.trainer-img-wrapper {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1.25rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trainer-img-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #60a5fa, #a78bfa, #f9a8d4);
+    opacity: 0.4;
+    transition: opacity 0.3s;
+    z-index: 0;
+}
+
+.trainer-card:hover .trainer-img-wrapper::before {
+    opacity: 0.7;
+    background: linear-gradient(145deg, #3b82f6, #8b5cf6, #ec4899);
+}
+
+.trainer-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 10px 18px -6px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    background: #f0f4fa;
+    transition: border-color 0.2s;
+}
+
+.trainer-card:hover .trainer-img {
+    border-color: #ffffff;
+}
+
+        /* text block */
+.trainer-name {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #0a1929;
+    margin-bottom: 0.25rem;
+}
+
+.trainer-specialty {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2563eb;
+    background: rgba(1, 8, 23, 0.1);
+    padding: 0.3rem 1.2rem;
+    border-radius: 60px;
+    display: inline-block;
+    margin: 0.6rem 0 1rem 0;
+    backdrop-filter: blur(4px);
+    border: 1px solid #2563eb20;
+}
+
+.trainer-bio {
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.5;
+    margin: 0.5rem 0 1.4rem 0;
+    padding: 0 0.5rem;
+    font-weight: 400;
+    flex: 1;
+}
+
+        /* social / contact row — minimal icons */
+.trainer-social {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 0.25rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.25rem;
+    width: 100%;
+}
+
+.trainer-social a {
+    color: #475569;
+    font-size: 1.5rem;
+    transition: all 0.15s;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background: #f1f5f9;
+    text-decoration: none;
+}
+
+.trainer-social a:hover {
+    color: #1e40af;
+    background: #ffffff;
+    transform: scale(1.12);
+    box-shadow: 0 8px 14px -8px #1e3a8a60;
+}
+
+        /* demo trainers data — all images from ui faces / unsplash (free for demonstration) */
+        /* note: images are from pexels/placekitten? but we use reliable placeholder images (gender-neutral, modern) */
+        /* randomuser.me/api/portraits (men/women) – safe, fast and nice variety */
+
+        /* responsive fine-tune */
+@media (max-width: 550px) {
+    .collection-head h2 {
+        font-size: 2rem;
+        padding: 0.4rem 1.5rem;
+    }
+
+    .trainer-grid {
+        gap: 1.5rem;
+    }
+
+    .trainer-card {
+        padding: 1.5rem 1rem 1.5rem;
+    }
+
+    .trainer-img-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+}

@@ -1,0 +1,484 @@
+/* Trainer Cards CSS - Light Theme Version */
+
+/* Subtle section header */
+.collection-head {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.collection-head h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: var(--dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    backdrop-filter: blur(4px);
+    padding: 0.6rem 2rem;
+    border-radius: 60px;
+    box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+}
+
+.collection-head h2 i {
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+/* Grid – modern, responsive, airy */
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.2rem 1.8rem;
+    justify-items: center;
+    padding: 1.3rem;
+}
+
+/* Card style — premium soft minimal / light theme */
+.trainer-card {
+    background: white;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 28px;
+    box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.05),
+                0 2px 4px -2px rgba(0, 0, 0, 0.02),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    width: 100%;
+    max-width: 360px;
+    padding: 2rem 1.5rem 1.8rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.trainer-card:hover {
+    transform: translateY(-8px);
+    background: white;
+    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12), 0 4px 8px -4px rgba(0, 0, 0, 0.02);
+    border-color: var(--primary-light);
+}
+
+/* Image area — circular with gradient halo */
+.trainer-img-wrapper {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1.25rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trainer-img-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #ff5500, #ff8533, #ffaa66);
+    opacity: 0.15;
+    transition: opacity 0.3s;
+    z-index: 0;
+}
+
+.trainer-card:hover .trainer-img-wrapper::before {
+    opacity: 0.3;
+    background: linear-gradient(145deg, var(--primary), var(--primary-dark), #ffaa66);
+}
+
+.trainer-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 8px 16px -6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    background: #f5f5f5;
+    transition: border-color 0.2s;
+}
+
+.trainer-card:hover .trainer-img {
+    border-color: var(--primary-light);
+    box-shadow: 0 10px 20px -8px rgba(255, 85, 0, 0.2);
+}
+
+/* Text block */
+.trainer-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--dark);
+    margin-bottom: 0.25rem;
+}
+
+.trainer-specialty {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 0.3rem 1.2rem;
+    border-radius: 60px;
+    display: inline-block;
+    margin: 0.6rem 0 1rem 0;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 85, 0, 0.15);
+}
+
+.trainer-bio {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.5;
+    margin: 0.5rem 0 1.4rem 0;
+    padding: 0 0.5rem;
+    font-weight: 400;
+    flex: 1;
+}
+
+/* Social / contact row — minimal icons */
+.trainer-social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.25rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.25rem;
+    width: 100%;
+}
+
+.trainer-social a {
+    color: var(--gray);
+    font-size: 1.3rem;
+    transition: all 0.2s ease;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f5f5f5;
+    text-decoration: none;
+}
+
+.trainer-social a:hover {
+    color: var(--primary);
+    background: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px -4px rgba(255, 85, 0, 0.2);
+}
+
+/* Add Card Styles */
+.trainer-card.add-card {
+    background: linear-gradient(145deg, white, #fafafa);
+    border: 2px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    cursor: pointer;
+}
+
+.trainer-card.add-card:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    transform: translateY(-8px);
+}
+
+.add-card-content {
+    text-align: center;
+    padding: 30px;
+}
+
+.add-icon-wrapper {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--primary-light), rgba(255, 85, 0, 0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    border: 1px solid var(--border-primary);
+}
+
+.add-icon-wrapper i {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.trainer-card.add-card:hover .add-icon-wrapper {
+    transform: scale(1.1) rotate(90deg);
+    background: var(--primary);
+}
+
+.trainer-card.add-card:hover .add-icon-wrapper i {
+    color: white;
+}
+
+.trainer-card.add-card h1 {
+    color: var(--dark);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.trainer-card.add-card p {
+    color: var(--gray);
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Assign Courses Button */
+.trainer-card .assign-courses {
+    margin: 0 0 15px 0;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(255, 85, 0, 0.2);
+    width: 100%;
+}
+
+.trainer-card .assign-courses:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 85, 0, 0.25);
+}
+
+.trainer-card .assign-courses:active {
+    transform: translateY(0);
+}
+
+/* No Trainers State */
+.no-trainers {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 60px;
+    background: white;
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--border-color);
+}
+
+.no-trainers i {
+    font-size: 3rem;
+    color: var(--gray);
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.no-trainers p {
+    color: var(--gray);
+    font-size: 1.1rem;
+}
+
+/* Modal Styles for Assign Courses - Light Theme */
+.modal-content {
+    background: white;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-modal:hover {
+    color: white;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 25px;
+    background: white;
+}
+
+/* Course Checkbox Group */
+.course-checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.course-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.course-checkbox-item:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.course-checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.course-checkbox-item label {
+    color: var(--dark);
+    font-size: 0.9rem;
+    cursor: pointer;
+    flex: 1;
+    font-weight: 500;
+}
+
+.course-checkbox-item small {
+    color: var(--gray);
+    font-size: 0.7rem;
+    display: block;
+    margin-top: 2px;
+}
+
+/* Alert Styles */
+.alert {
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alert-success {
+    background: rgba(40, 167, 69, 0.1);
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+
+.alert-danger {
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid var(--danger);
+    color: var(--danger);
+}
+
+.alert .close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* Scrollbar for checkbox group */
+.course-checkbox-group::-webkit-scrollbar {
+    width: 6px;
+}
+
+.course-checkbox-group::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.course-checkbox-group::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.course-checkbox-group::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Responsive fine-tune */
+@media (max-width: 768px) {
+    .collection-head h2 {
+        font-size: 1.8rem;
+        padding: 0.4rem 1.5rem;
+    }
+    
+    .collection-head h2 i {
+        font-size: 1.5rem;
+    }
+
+    .trainer-grid {
+        gap: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    .trainer-card {
+        padding: 1.5rem 1rem 1.5rem;
+    }
+
+    .trainer-img-wrapper {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .trainer-name {
+        font-size: 1.3rem;
+    }
+    
+    .trainer-specialty {
+        font-size: 0.8rem;
+    }
+    
+    .course-checkbox-group {
+        grid-template-columns: 1fr;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .collection-head h2 {
+        font-size: 1.4rem;
+        gap: 8px;
+    }
+    
+    .trainer-img-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .trainer-name {
+        font-size: 1.2rem;
+    }
+    
+    .trainer-social a {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+}
